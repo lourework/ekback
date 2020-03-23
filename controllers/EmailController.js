@@ -2,13 +2,19 @@ const { send } = require("./../services/EmailService");
 
 class EmailController {
   async send(req, res) {
-    console.log("Send email with values", req.body);
-    const emailSent = await send(req.body);
-    console.log("email sent", emailSent);
-    return res.send({
-      error: false,
-      message: "Email sent successfully!"
-    });
+    try {
+      await send(req.body);
+      return res.send({
+        error: false,
+        message: "Email enviado com sucesso."
+      });
+    } catch (error) {
+      console.log("Error sending email", error);
+      return res.status(error.code || 500).send({
+        error: true,
+        message: error.message || "Não foi possível enviar o email, tente novamente."
+      });
+    }
   }
 }
 

@@ -9,13 +9,13 @@ async function send(mail) {
     text: mail.message,
     html: `
       <div style="width: 600px; margin: 0 auto;">
-          <p>From: ${mail.from}</p>
+          <p>From: ${mailFrom}</p>
           <h1 style="text-align: center">${mail.subject}</h1>
           <p>${mail.message}</p>
       </div>
   `
   };
-  sgMail.send(msg);
+  return sgMail.send(msg);
 }
 
 module.exports = {
