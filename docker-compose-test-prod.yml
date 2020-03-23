@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+
+  ekcontabil_db:
+    image: mongo
+    restart: always
+    container_name: ekcontabil_db
+    ports:
+      - 27017:27017 
+    volumes:
+      - ekcontabil_db:/data/db
+    networks: 
+      - node-react-starter-network
+
+  ekcontabil_app:
+    image: thisk8brd/ekcontabil_app:prod
+    build: 
+      context: .
+      target: prod
+    container_name: ekcontabil_app
+    restart: always
+    volumes: 
+      - .:/app
+    ports:
+      - "80:5000"
+    depends_on:
+      - ekcontabil_db
+    environment:
+      - MONGODB_URI=mongodb://ekcontabil_db/ekcontabil_db
+    networks: 
+      - node-react-starter-network
+
+volumes: 
+  ekcontabil_db:
+    name: ekcontabil_db
+
+networks: 
+  node-react-starter-network:
+    name: node-react-starter-network
