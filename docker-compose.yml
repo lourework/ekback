@@ -28,6 +28,8 @@ services:
       - ekcontabil_db
     environment:
       - MONGODB_URI=mongodb://ekcontabil_db/ekcontabil_db
+      - SENDGRID_API_KEY=<REPLACE WITH YOUR OWN KEY>
+      - MAIL_FROM=<REPLACE WITH THE CORRECT EMAIL>
     networks: 
       - node-react-starter-network
 

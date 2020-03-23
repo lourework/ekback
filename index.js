@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 //IMPORT ROUTES
-// require("./routes/productRoutes")(app);
+require("./routes/emailRoutes")(app);
 
 app.use(express.static("client"));
 
