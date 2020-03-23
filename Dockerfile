@@ -13,15 +13,18 @@ ENV NODE_ENV=production
 
 CMD [ "npm", "start" ]
 
-# DEV CONFIG
-FROM prod as dev
+# UNCOMMENT THE NEXT LINES FOR DEVELOPMENT MODE
+# RUN docker-compose up TO START DEVELOPMENT SERVER
 
-EXPOSE 5000 3000
+# # DEV CONFIG
+# FROM prod as dev
 
-ENV NODE_ENV=development
+# EXPOSE 5000 3000
 
-RUN npm install -g nodemon
+# ENV NODE_ENV=development
 
-RUN npm install --only=dev
+# RUN npm install -g nodemon
 
-CMD [ "npm", "run", "dev" ]
+# RUN npm install --only=dev
+
+# CMD [ "npm", "run", "dev" ]
