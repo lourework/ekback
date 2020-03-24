@@ -1,0 +1,360 @@
+body {
+  background-color: #f6f6f6 !important;
+  width: 100%;
+  max-width: 1920px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #404040;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+}
+
+.banner {
+  background: #007f66 url(images/banner.png) no-repeat center top;
+  height: 100%;
+  max-height: 1080px;
+  min-height: 1080px;
+}
+
+.header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 30%;
+}
+
+.menu {
+  width: 70%;
+}
+
+.menu a {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 20px !important;
+}
+
+.banner__content {
+  height: 789px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__content-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 900;
+}
+
+.banner__content-title:after {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 90px;
+  margin: 30px 0 50px;
+  background-color: #fff;
+}
+
+.banner__content-subtitle {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.banner__infos { 
+  height: 140px;
+  display: flex;
+}
+.banner__infos p {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+}
+
+.banner__infos .faleconosco {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.icon_wpp {
+  padding: 0 15px;
+}
+
+.contato_b {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.quem h3, .tabela h3, .contato h3 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #007f66;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.quem h3:after, .tabela h3:after, .contato h3:after {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 90px;
+  margin: 30px 0 50px;
+  background-color: #007f66;
+}
+
+.descricao {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: #404040;
+}
+
+.txt_descricao {
+  padding: 40px 0;;
+}
+
+.isentos {
+  background-color: #007f66;
+}
+
+.isentos h3 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.isentos h3:after {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 90px;
+  margin: 30px 0 50px;
+  background-color: #fff;
+}
+
+.isentos .descricao, .isentos-2 .descricao {
+  color: #fff;
+  text-align: right;
+}
+
+.isentos .txt_descricao, .isentos-2 .txt_descricao {
+  color: #fff;
+}
+
+.isentos-2 {
+  background: #249581;
+}
+
+.isentos-2 .descricao {
+  padding-top: 40px;
+}
+
+sup {
+  font-size: 50% !important;
+  top: -0.9em !important;
+}
+
+input, textarea {
+  width: 100%;
+  background-color: #e6e8e8;
+  border: 1px solid #007f66;
+  margin: 10px 0 !important;
+  padding: 20px 25px;
+  border-radius: 30px;
+}
+
+button.enviar {
+  background-color: #e6e8e8;
+  border: 1px solid #007f66;
+  border-radius: 30px;
+  padding: 20px 35px;
+  color: #007f66;
+  float: right;
+}
+
+button.enviar:hover {
+  background-color: #007f66;
+  color: #fff;
+}
+
+.rodape {
+  background: #007f66;
+  color: #fff; 
+  padding: 5px 0;
+}
+
+.rodape p, .rodape a {
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.menu_mobile {
+  display: none;
+}
+
+/* */
+
+/* Icon 1 */
+
+.animated-icon1, .animated-icon2, .animated-icon3 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  }
+  
+  .animated-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  }
+  
+  .animated-icon1 span {
+  background: #fff;
+  }
+  
+  .animated-icon1 span:nth-child(1) {
+  top: 0px;
+  }
+  
+  .animated-icon1 span:nth-child(2) {
+  top: 10px;
+  }
+  
+  .animated-icon1 span:nth-child(3) {
+  top: 20px;
+  }
+  
+  .animated-icon1.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  }
+  
+  .animated-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  }
+  
+  .animated-icon1.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  }
+  
+  @media screen and (max-width: 1205px) {
+    .menu {
+      display: none;
+    }
+
+    .menu_mobile {
+      display: block;
+    }
+  }
+  
+ @media screen and (max-width: 768px) {
+  .tabela {
+    overflow-x: scroll;
+    padding: 10px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .banner {
+    background: #007f66 url(images/banner.png) no-repeat right top;
+    max-height: 1150px;
+    padding: 30px;
+  }
+
+  .banner__content-title {
+    font-size: 2rem;
+  }
+
+  .banner__content-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .quem h3, .tabela h3, .contato h3, .isentos h3 {
+    font-size: 3rem;
+  }
+
+  .descricao {
+    font-size: 1.2rem;
+  }
+
+  .isentos .descricao, .isentos-2 .descricao {
+    text-align: left;
+  }
+
+  .banner__infos p {
+    font-size: 18px;
+  }
+
+  .icon_wpp {
+    padding: 0 8px;
+    width: 35px;
+    margin-top: -5px;
+}
+
+}
