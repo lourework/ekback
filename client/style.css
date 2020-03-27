@@ -124,7 +124,7 @@ p {
 }
 
 .contato .contato_b a {
-  color: #404040;
+  color: #404040 !important;
 }
 
 section {
