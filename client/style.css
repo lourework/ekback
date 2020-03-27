@@ -212,6 +212,10 @@ input, textarea {
   border-radius: 30px;
 }
 
+input.msg__erro {
+  border: 1px solid #bd2130;
+}
+
 button.enviar {
   background-color: #e6e8e8;
   border: 1px solid #007f66;

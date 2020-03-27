@@ -30,8 +30,8 @@
 
       <div class="banner__content">
         <h1 class="banner__content-title">Faça sua <br/>Declaração de <br/>Imposto de Renda <br/>sem sair de casa!</h1>
-        <h2 class="banner__content-subtitle">Prazo de entrega 30 de abril.</h2>
-        <h2 class="banner__content-subtitle">Encaminhe toda sua documentação digitalmente que elaboramos para você! </h2>
+        <h2 class="banner__content-subtitle">Prazo de entrega 30 de abril.</h2><br/>
+        <h2 class="banner__content-subtitle">Encaminhe toda sua documentação <br />digitalmente que elaboramos para você! </h2>
       </div>
 
       <div class="banner__infos align-items-center justify-content-center">
@@ -256,7 +256,7 @@
       <div class="row">
         <div class="col-12 col-md-8 offset-md-2">
            <form>
-            <input type="text" name="name" value="" placeholder="Seu Nome" required/><br/>
+            <input class="msg__erro" type="text" name="name" value="" placeholder="Seu Nome" required/><br/>
             <input type="email" name="email" value="" placeholder="Email" required/><br/>
             <textarea name="message" value="" placeholder="Digite uma mensagem..."></textarea>
             <span id="msg__form" class="msg">Mensagem enviada!</span>
@@ -293,6 +293,7 @@
 
      const submit = async (e) => {
        e.preventDefault();
+       if (!formData.email || !formData.name) return
        const res = await axios.post(
          '/api/email',
          formData
