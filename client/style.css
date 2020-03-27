@@ -120,7 +120,11 @@ p {
 }
 
 .contato .contato_b {
-  border: 1px solid ##007f66;
+  border: 1px solid #007f66;
+}
+
+.contato .contato_b a {
+  color: #404040;
 }
 
 section {
