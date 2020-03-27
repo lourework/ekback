@@ -344,8 +344,13 @@ button.enviar:hover {
     padding: 30px;
   }
 
+  .banner__content {
+    height: auto;
+  }
+
   .banner__content-title {
     font-size: 2rem;
+    margin-top: -350px;
   }
 
   .banner__content-subtitle {
