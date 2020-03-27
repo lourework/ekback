@@ -397,6 +397,10 @@ button.enviar:hover {
       top: 7rem;
       right: 9rem;
     }
+
+    button:focus {
+      outline: none;
+    }
   }
   
  @media screen and (max-width: 768px) {
