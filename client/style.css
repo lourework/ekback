@@ -358,6 +358,18 @@ button.enviar:hover {
 
  
   /* fim menu */
+
+  :focus {
+    outline: none !important;
+  }
+
+  .msg {
+    display: none;
+  }
+
+  .msg.enviado {
+    display: block;
+  }
   
   @media screen and (max-width: 1205px) {
     .navbar__item {
@@ -398,9 +410,7 @@ button.enviar:hover {
       right: 9rem;
     }
 
-    button:focus {
-      outline: none !important;
-    }
+    
   }
   
  @media screen and (max-width: 768px) {
