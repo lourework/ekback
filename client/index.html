@@ -259,7 +259,7 @@
             <input type="text" name="name" value="" placeholder="Seu Nome" required/><br/>
             <input type="email" name="email" value="" placeholder="Email" required/><br/>
             <textarea name="message" value="" placeholder="Digite uma mensagem..."></textarea>
-            <span class="msg enviado">Mensagem enviada!</span>
+            <span id="msg__form" class="msg">Mensagem enviada!</span>
             <button id="submit-contact-form" type="submit" class="enviar">Enviar</button>
            </form>
         </div>
@@ -297,7 +297,7 @@
          '/api/email',
          formData
        );
-       console.log('values sent', res);
+       $('#msg__form').addClass('enviado');
      }
 
      $(document).ready(function () {
