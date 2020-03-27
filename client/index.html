@@ -19,47 +19,12 @@
         <div class="logo">
           <img src="images/logo.png" alt="Logo Ek Contábil">
         </div>
-        <div class="menu">
-          <a href="#quem">quem deve declarar</a>
-          <a href="#isentos">isentos</a>
-          <a href="#tabela">tabela 2020</a>
-          <a href="#contato">fale conosco</a>
-        </div>
-        <div class="menu_mobile">
-            <!--Navbar-->
-            <nav class="navbar navbar-light amber lighten-4 mb-4"></nav>
-
-              <!-- Collapse button -->
-              <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
-                aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="animated-icon1"><span></span><span></span><span></span></div>
-              </button>
-
-              <!-- Collapsible content -->
-              <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-
-                <!-- Links -->
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#quem">quem deve declarar <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#isentos">isentos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#tabela">tabela 2020</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contato">fale conosco</a>
-                  </li>
-                </ul>
-                <!-- Links -->
-
-              </div>
-              <!-- Collapsible content -->
-
-            </nav>
-            <!--/.Navbar-->
+        <div id="navbar-menu" class="navbar">
+          <div class="navbar__item"><a href="#quem">quem deve declarar</a></div>
+          <div class="navbar__item"><a href="#isentos">isentos</a></div>
+          <div class="navbar__item"><a href="#tabela">tabela 2020</a></div>
+          <div class="navbar__item"><a href="#tabela"><a href="#contato">fale conosco</a></a></div>
+          <button class="navbar_burguer" onclick="displayMenu()">button</button>
         </div>
       </div>
 
@@ -349,5 +314,26 @@
      });
 
    </script>
+   <script>
+    let open = false;
+    function displayMenu() {
+      console.log("display modal");
+      if (open) {
+        actions.open();
+      } else {
+        actions.close();
+      }
+      open = !open;
+    }
+    const navbarContainer = document.getElementById("navbar-menu");
+    const actions = {
+      open: () => {
+        navbarContainer.classList.add("navbar--active");
+      },
+      close: () => {
+        navbarContainer.classList.remove("navbar--active");
+      }
+    };
+  </script>
 </body>
 </html>

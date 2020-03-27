@@ -316,14 +316,86 @@ button.enviar:hover {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
   }
+
+
+  /* menu th */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .navbar--active {
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    font-size: 4rem;
+  }
+
+  .navbar__item {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar_burguer {
+    display: none;
+  }
+
+ 
+  /* fim menu */
   
   @media screen and (max-width: 1205px) {
-    .menu {
+    .navbar__item {
       display: none;
     }
-
-    .menu_mobile {
-      display: block;
+  
+    .navbar--active > .navbar__item {
+      display: inherit; 
+      padding: 2.5rem 1rem;
+    }
+  
+    .navbar_burguer {
+      display: inherit;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: transparent;
+      color: transparent;
+      border: none;
+      background-image: url('images/open.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    
+    .navbar.navbar--active {
+      background: #007f66;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .navbar.navbar--active .navbar_burguer {
+      background-image: url('images/close.png');
+      width: 25px;
+      top: 7rem;
+      right: 9rem;
     }
   }
   
