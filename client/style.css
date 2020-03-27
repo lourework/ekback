@@ -399,7 +399,7 @@ button.enviar:hover {
     }
 
     button:focus {
-      outline: none;
+      outline: none !important;
     }
   }
   
