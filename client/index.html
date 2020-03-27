@@ -256,7 +256,7 @@
       <div class="row">
         <div class="col-12 col-md-8 offset-md-2">
            <form>
-            <input class="msg__erro" type="text" name="name" value="" placeholder="Seu Nome" required/><br/>
+            <input class="" type="text" name="name" value="" placeholder="Seu Nome" required/><br/>
             <input type="email" name="email" value="" placeholder="Email" required/><br/>
             <textarea name="message" value="" placeholder="Digite uma mensagem..."></textarea>
             <span id="msg__form" class="msg">Mensagem enviada!</span>
@@ -285,15 +285,21 @@
    <script>
      const formData = {};
 
-     const setData = (name, value) => {
-       console.log('update field', name);
-       console.log('with value', value);
+     const setData = (name, value, removeClass) => {
+      if(removeClass) $(`input[name="${removeClass}"]`).removeClass('msg__erro');
        formData[name] = value;
      };
 
      const submit = async (e) => {
        e.preventDefault();
-       if (!formData.email || !formData.name) return
+       if (!formData.name) {
+        $('input[name="name"]').addClass('msg__erro');
+         return;
+       }
+       if (!formData.email) {
+        $('input[name="email"]').addClass('msg__erro');
+         return;
+       }
        const res = await axios.post(
          '/api/email',
          formData
@@ -307,8 +313,8 @@
          $('.animated-icon1').toggleClass('open');
        });
 
-       $('input[name="name"]').keyup((e) => setData('name', e.target.value));
-       $('input[name="email"]').keyup((e) => setData('email', e.target.value));
+       $('input[name="name"]').keyup((e) => setData('name', e.target.value, 'name'));
+       $('input[name="email"]').keyup((e) => setData('email', e.target.value, 'email'));
        $('textarea[name="message"]').keyup((e) => setData('message', e.target.value));
       
        $('#submit-contact-form').click(submit);
